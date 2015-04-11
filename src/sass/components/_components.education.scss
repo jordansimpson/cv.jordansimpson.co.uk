@@ -1,0 +1,29 @@
+/* 
+------------
+COMPONENTS.
+EDUCATION
+------------ 
+*/
+
+.education{
+	border-top: 1px solid $border-clr;
+	@include remCalc(padding-top, $spacer--dbl);
+	@include remCalc(padding-bottom, $spacer--dbl);
+}
+
+.education__details-list{
+	margin-bottom: 0;
+	display: block;
+	@include remCalc(margin-top, $spacer);
+	dt{
+		color: $base-text-clr--dull;
+		font-weight: normal;
+		@include remCalc(margin-bottom, $spacer--small);
+	}
+	dd{
+		@include remCalc(margin-bottom, $spacer--dbl);
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}

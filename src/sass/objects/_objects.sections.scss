@@ -1,0 +1,11 @@
+/* 
+------------
+OBJECT.
+SECTIONS
+------------ 
+*/
+
+.section--padded{
+	@include remCalc(padding-top, $spacer--dbl);
+	@include remCalc(padding-bottom, $spacer--dbl);
+}

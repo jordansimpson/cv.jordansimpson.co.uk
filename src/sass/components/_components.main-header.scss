@@ -1,0 +1,17 @@
+/* 
+------------
+COMPONENTS.
+MAIN HEADER
+------------ 
+*/
+
+.main-header{
+	background: $brand-red;
+	color: #fff;
+	@include remCalc(padding-top, 50px);
+	@include remCalc(padding-bottom, 50px);
+	@include respond-to(small-screen){
+		@include remCalc(padding-top, 50px);
+		@include remCalc(padding-bottom, 50px);
+	}
+}

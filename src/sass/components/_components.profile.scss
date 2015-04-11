@@ -1,0 +1,52 @@
+/* ------------ *\
+	PROFILE
+\* ------------ */
+
+.profile{
+	@include remCalc(padding-top, 20px);
+	@include remCalc(padding-bottom, 20px);
+}
+
+
+.profile__name{
+	text-transform: uppercase;
+	display: block;
+	@include remCalc(font-size, $alpha);
+	@include remCalc(margin-bottom, $spacer--small);
+	@include remCalc(margin-top, $spacer--large);
+}
+
+.profile__occupation{
+	color: $base-text-clr;
+	display: block;
+	letter-spacing: 0.05em;
+}
+
+.profile__picture{
+	border: 5px solid #eee;
+	border: 5px solid rgba(100,100,100,0.5);
+	border-radius: 50%;
+	float: left;
+	@include remCalc(max-width, 150px);
+	@include remCalc(margin-right, $spacer--dbl);
+}
+
+.profile__details-list{
+	display: block;
+	@include remCalc(margin-top, $spacer);
+	dt{
+		color: $base-text-clr--dull;
+		font-weight: normal;
+		@include remCalc(margin-bottom, $spacer--small);
+	}
+	dd{
+		@include remCalc(margin-bottom, $spacer--dbl);
+	}
+}
+
+.profile__details-link a{
+	text-decoration: none;
+	i{
+		@include remCalc(margin-right, $spacer--small);
+	}
+}

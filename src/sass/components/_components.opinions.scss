@@ -1,0 +1,13 @@
+/* ---------- *\
+	OPINIONS
+\* ---------- */
+
+.opinions{
+	border-top: 1px solid $border-clr;
+	@include remCalc(padding-top, $spacer--dbl);
+	@include remCalc(padding-bottom, $spacer--dbl);
+}
+
+.opinions__list li{
+	@include remCalc(margin-bottom, $spacer--large);
+}

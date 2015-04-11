@@ -1,0 +1,57 @@
+/* 
+------------
+COMPONENTS.
+EXPERIENCE
+------------ 
+*/
+
+.experience{
+	border-top: 1px solid $border-clr;
+	@include remCalc(padding-top, $spacer--dbl);
+	@include remCalc(padding-bottom, $spacer--dbl);
+}
+
+.experience__list{
+	border-left: 2px dotted $grey;
+	float: left;
+	@include remCalc(margin-top, $spacer--dbl);
+	@include remCalc(margin-left, $spacer);
+	@include remCalc(padding-left, 30px);
+	padding-left: 20px;
+}
+
+	.experience__list--item{
+		position: relative;
+		&:after{
+			content: '';
+			background: $brand_red;
+			position: absolute;
+			left: -30px;
+			top: 0;
+			border-radius: $spacer--dbl;
+			@include remCalc(width, $spacer--dbl);
+			@include remCalc(height, $spacer--dbl);
+		}
+		ul{
+			@include remCalc(margin-bottom, $spacer--large);
+			li{
+				@include remCalc(margin-bottom, $spacer--dbl);
+			}
+		}
+		&:last-child{
+			ul{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+.job{
+	@include remCalc(margin-bottom, $spacer--dbl);
+}
+
+	.job__role{
+		@include remCalc(font-size, 16px);
+		color: $base-text-clr--dull;
+		letter-spacing: 0.02;
+		@include remCalc(margin-bottom, $spacer--dbl);
+	}

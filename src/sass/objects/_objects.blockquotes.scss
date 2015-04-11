@@ -1,0 +1,29 @@
+/* 
+------------
+OBJECT.
+BLOCKQUOTES
+------------ 
+*/
+
+.color-quote{
+	border-left: 5px solid $brand-red;
+	position: relative;
+	font-family: $serif;
+	@include remCalc(font-size, $gamma);
+	small{
+		font-family: $sans-serif;
+	}
+	&:before{
+		content: '\201C';
+		position: absolute;
+		top: 0;
+		left: -10px;
+		color: $brand-red;
+		background: #fff;
+		@include remCalc(padding-top, 17px);
+		@include remCalc(padding-right, 3px);
+		@include remCalc(padding-left, 3px);
+		@include remCalc(font-size, $beta);
+		@include remCalc(line-height, $spacer);
+	}
+}
