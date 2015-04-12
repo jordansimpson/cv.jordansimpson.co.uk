@@ -1,2 +1,2 @@
 # The curriculum vitae of Jordan Simpson
-[Read it here.](http://cv.jordansimpson.co.uk)
+[Click here to view it.](http://cv.jordansimpson.co.uk)
