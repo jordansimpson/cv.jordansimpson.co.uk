@@ -33,6 +33,16 @@ MAIN FOOTER
 	&__contact {
 		float: right;
 		margin-top:4px;
+		a {
+      color: #ffffff;
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px dotted #ffffff;
+      transition: border .25s;
+      &:hover {
+        border-bottom: 1px solid #ffffff;
+      }
+    }
 		@include respond-to(1024px) {
 			float: left;
 			clear: left;

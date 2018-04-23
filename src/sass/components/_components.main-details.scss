@@ -9,7 +9,11 @@ MAIN DETAILS
   float: left;
   width: 100%;
 	@include remCalc(padding-top, 144px);
-	@include remCalc(padding-bottom, 80px);
+  @include remCalc(padding-bottom, 80px);
+  @include respond-to(small-screen) {
+    @include remCalc(padding-top, 64px);
+  	@include remCalc(padding-bottom, 64px);
+  }
   &__inner {
     display: flex;
     @include respond-to(960px) {

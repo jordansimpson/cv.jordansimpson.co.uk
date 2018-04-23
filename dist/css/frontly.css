@@ -2124,7 +2124,7 @@ MAIN HEADER
   .main-header__contact {
     float: right;
     width: auto;
-    padding: 16px;
+    padding: 24px;
     background-color: rgba(27, 27, 43, 0.5);
     border-radius: 4px; }
     .main-header__contact p {
@@ -2132,6 +2132,14 @@ MAIN HEADER
       line-height: 1; }
       .main-header__contact p:last-child {
         margin-bottom: 0; }
+    .main-header__contact a {
+      color: #ffffff;
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px dotted #ffffff;
+      transition: border .25s; }
+      .main-header__contact a:hover {
+        border-bottom: 1px solid #ffffff; }
     @media only screen and (max-width: 750px) {
       .main-header__contact {
         float: left; } }
@@ -2141,6 +2149,8 @@ MAIN HEADER
     @media only screen and (max-width: small-screen) {
       .main-header__contact {
         width: 100%; } }
+  .main-header__attention {
+    margin-bottom: 24px; }
 
 /* 
 ------------
@@ -2163,10 +2173,10 @@ INTRO
     margin-bottom: -64px;
     margin-left: -64px;
     margin-top: -64px;
-    background-image: url("../../img/jordan_simpson_website.jpg");
+    background-image: url("../../img/Jordan_Simpson.jpg");
     background-size: cover;
     background-position-x: right;
-    background-position-y: 100%; }
+    background-position-y: 50%; }
     @media only screen and (max-width: 960px) {
       .intro__inner {
         background: none;
@@ -2193,7 +2203,7 @@ INTRO
   .intro__image {
     display: none;
     height: 450px;
-    background-image: url("../../img/jordan_simpson_website.jpg");
+    background-image: url("../../img/Jordan_Simpson.jpg");
     background-size: cover;
     background-position-x: right; }
     @media only screen and (max-width: 960px) {
@@ -2218,6 +2228,18 @@ MAIN DETAILS
   padding-top: 9rem;
   padding-bottom: 80px;
   padding-bottom: 5rem; }
+  @media only screen and (max-width: 749px) {
+    .main-details {
+      padding-top: 64px;
+      padding-top: 4rem;
+      padding-bottom: 64px;
+      padding-bottom: 4rem; } }
+  @media only screen and (max-width: small-screen) {
+    .main-details {
+      padding-top: 64px;
+      padding-top: 4rem;
+      padding-bottom: 64px;
+      padding-bottom: 4rem; } }
   .main-details__inner {
     display: -ms-flexbox;
     display: flex; }
@@ -2380,6 +2402,14 @@ MAIN FOOTER
   .main-footer__contact {
     float: right;
     margin-top: 4px; }
+    .main-footer__contact a {
+      color: #ffffff;
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px dotted #ffffff;
+      transition: border .25s; }
+      .main-footer__contact a:hover {
+        border-bottom: 1px solid #ffffff; }
     @media only screen and (max-width: 1024px) {
       .main-footer__contact {
         float: left;

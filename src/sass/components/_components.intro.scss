@@ -21,10 +21,10 @@ INTRO
     margin-bottom: -64px;
     margin-left: -64px;
     margin-top: -64px;
-    background-image: url('../../img/jordan_simpson_website.jpg');
+    background-image: url('../../img/Jordan_Simpson.jpg');
     background-size: cover;
     background-position-x: right;
-    background-position-y: 100%;
+    background-position-y: 50%;
     @include respond-to(960px) {
       background: none;
       margin: 0;
@@ -55,7 +55,7 @@ INTRO
   &__image {
     display: none;
     height: 450px;
-    background-image: url('../../img/jordan_simpson_website.jpg');
+    background-image: url('../../img/Jordan_Simpson.jpg');
     background-size: cover;
     background-position-x: right;
     @include respond-to(960px) {
