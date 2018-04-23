@@ -2173,7 +2173,7 @@ INTRO
     margin-bottom: -64px;
     margin-left: -64px;
     margin-top: -64px;
-    background-image: url("../../img/Jordan_Simpson.jpg");
+    background-image: url("../../img/jordan-simpson-website.jpg");
     background-size: cover;
     background-position-x: right;
     background-position-y: 50%; }
@@ -2203,7 +2203,7 @@ INTRO
   .intro__image {
     display: none;
     height: 450px;
-    background-image: url("../../img/Jordan_Simpson.jpg");
+    background-image: url("../../img/jordan-simpson-website.jpg");
     background-size: cover;
     background-position-x: right; }
     @media only screen and (max-width: 960px) {
