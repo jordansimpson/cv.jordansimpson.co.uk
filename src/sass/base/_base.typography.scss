@@ -5,12 +5,14 @@ TYPOGRAPHY
 ------------ 
 */
 
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5 {
 	@include remCalc(margin-bottom, $spacer);
+	color: $main-orange;
+	font-weight: 900;
 }
 
 h1{
-	@include remCalc(font-size, $alpha);
+	@include remCalc(font-size, $beta);
 }
 
 h2{
@@ -26,7 +28,7 @@ h4{
 }
 
 h5{
-	@include remCalc(font-size, $epsilon);
+	@include remCalc(font-size, 20px);
 }
 
 .sub-header{
@@ -34,12 +36,16 @@ h5{
 }
 
 p{
-	@include remCalc(margin-bottom, $spacer);
+	@include remCalc(margin-bottom, 16px);
 	line-height: $base-line-height;
 }
 
 small, .small-print{
 	@include remCalc(font-size, 12px);
+}
+
+strong {
+	font-weight: 900;
 }
 
 a{

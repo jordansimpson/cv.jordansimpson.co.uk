@@ -83,7 +83,6 @@ The object files consist of styling for non specific UI blocks e.g. lists. These
 
 @import "objects/objects.blockquotes";
 @import "objects/objects.dropdowns";
-@import "objects/objects.grid";
 @import "objects/objects.lists";
 @import "objects/objects.sections";
 @import "objects/objects.tables";
@@ -101,17 +100,11 @@ The components files are the UI styling files. You can create UI blocks with mor
 @import "components/components.buttons";
 @import "components/components.education";
 @import "components/components.experience";
-@import "components/components.frontly-dropdowns";
-@import "components/components.frontly-form";
-@import "components/components.frontly-nav";
-@import "components/components.image-styles";
-@import "components/components.main-footer";
 @import "components/components.main-header";
-@import "components/components.opinions";
-@import "components/components.panels";
-@import "components/components.profile";
-@import "components/components.tables";
-@import "components/components.tooltips";
+@import "components/components.intro";
+@import "components/components.main-details";
+@import "components/components.recent-work";
+@import "components/components.main-footer";
 
 
 /* 

@@ -1,0 +1,70 @@
+/* 
+------------
+COMPONENTS.
+INTRO
+------------ 
+*/
+
+.intro {
+  float: left;
+  width: 100%;
+	background: $dark-blue;
+  h1 {
+    text-transform: uppercase;
+  }
+  p {
+    @include remCalc(font-size, 16px);
+  }
+  &__inner {
+    width: calc(100% + 128px);
+    padding: 80px 64px;
+    margin-bottom: -64px;
+    margin-left: -64px;
+    margin-top: -64px;
+    background-image: url('../../img/jordan_simpson_website.jpg');
+    background-size: cover;
+    background-position-x: right;
+    background-position-y: 100%;
+    @include respond-to(960px) {
+      background: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+  &__content {
+    position: relative;
+    background-color: #ffffff;
+    padding: 48px;
+    border-radius: 4px;
+    width: 40%;
+    h3 {
+      margin-bottom: 24px;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+    @include respond-to(960px) {
+      width: 100%;
+      background-color: transparent;
+      margin: 0;
+      padding: 64px 0;
+      color: #ffffff;
+    }
+  }
+  &__image {
+    display: none;
+    height: 450px;
+    background-image: url('../../img/jordan_simpson_website.jpg');
+    background-size: cover;
+    background-position-x: right;
+    @include respond-to(960px) {
+      display: block;
+      width: calc(100% + 64px);
+      margin-left: -32px;
+    }
+    @include respond-to(650px) {
+      height: 300px;
+    }
+  }
+}

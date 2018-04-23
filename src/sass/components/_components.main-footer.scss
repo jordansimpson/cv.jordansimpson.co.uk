@@ -6,15 +6,46 @@ MAIN FOOTER
 */
 
 .main-footer{
-	background: $brand-red;
+	float: left;
+	width: 100%;
+	background-color: $dark-blue;
 	color: #fff;
-	@include remCalc(padding-top, 50px);
-	@include remCalc(padding-bottom, 50px);
-	@include respond-to(small-screen){
-		@include remCalc(padding-top, 50px);
-		@include remCalc(padding-bottom, 50px);
+	@include remCalc(padding-top, 48px);
+	@include remCalc(padding-bottom, 48px);
+	&__title {
+		float: left;
+		color: #ffffff;
+		font-weight: 400;
+		&--name {
+			text-transform: uppercase;
+			color: $main-orange;
+			font-weight: 900;
+			@include respond-to(650px){
+				float: left;
+				width: 100%;
+				margin-bottom: 16px;
+			}
+		}
+		&--job-description {
+			
+		}
 	}
-	a{
-		color: #fff;
+	&__contact {
+		float: right;
+		margin-top:4px;
+		@include respond-to(1024px) {
+			float: left;
+			clear: left;
+			margin-top: 24px;
+		}
+		&--detail {
+			display: inline-block;
+			margin-left: 16px;
+			@include respond-to(1024px) {
+				margin-left: 0;
+				margin-right: 16px;
+				margin-bottom: 16px;
+			}
+		}
 	}
 }

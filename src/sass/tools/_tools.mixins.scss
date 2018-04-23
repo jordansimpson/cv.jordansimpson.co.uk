@@ -109,28 +109,41 @@
 // *  
 // */
 
+// ------------
+// MIXINS.
+// MEDIA QUERIES
+// ------------
+// [!]DEPENDENCIES:
+// settings.breakpoints.scss
+// ------------
+
 @mixin respond-to($media) {
-    @if $media == x-small-screen{
+    @if $media == tiny {
         @media only screen 
-        and (max-width: $break-xsmall)
+        and (max-width: $break-tiny)
         { @content; }
     }
-    @if $media == small-screen{
+    @if $media == small-screen {
         @media only screen  
         and (max-width: $break-small - 1)
         { @content; }
     }
-    @if $media == medium-screen{
+    @if $media == medium-screen {
         @media only screen 
         and (max-width: $break-medium - 1)
         { @content; }
     }
-    @if $media == large-screen{
+    @if $media == large-screen {
         @media only screen 
         and (min-width: $break-large)
         { @content; }
     }
-    @if $media == retina{
+    @if $media == $media {
+        @media only screen 
+        and (max-width: $media)
+        { @content; }
+    }
+    @if $media == retina {
         @media 
         only screen and (-webkit-min-device-pixel-ratio: 2),
         only screen and (min--moz-device-pixel-ratio: 2),
@@ -163,14 +176,15 @@
 // %btn placholder
 
 %btn{
-    @include remCalc(padding, 10px);
-    @include remCalc(margin-right, 10px);
-    @include remCalc(margin-bottom, 10px);
-    border: 1px solid $border-clr;
+    @include remCalc(padding, 16px);
+    @include remCalc(margin-right, 16px);
+    @include remCalc(margin-bottom, 16px);
     @include transition(.25s);
-    background: #f6f6f6;
+    background: $main-orange;
+    color: #ffffff;
     text-align: center;
     vertical-align: middle;
+    line-height: 1;
     letter-spacing: .05rem;
     text-decoration: none;
     display: inline-block;
@@ -182,5 +196,5 @@
 // This placeholder provides a smoother corner effect.
 
 %smooth{
-    border-radius: 5px;
+    border-radius: 4px;
 }

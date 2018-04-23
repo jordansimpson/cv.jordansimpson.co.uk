@@ -6,12 +6,69 @@ MAIN HEADER
 */
 
 .main-header{
-	background: $brand-red;
+  float: left;
+  width: 100%;
+	background: $main-blue;
 	color: #fff;
-	@include remCalc(padding-top, 50px);
-	@include remCalc(padding-bottom, 50px);
+  @include remCalc(padding-top, 120px);
+  @include remCalc(padding-bottom, 184px);
+  @include respond-to(960px){
+  	@include remCalc(padding-bottom, 120px);
+  }
 	@include respond-to(small-screen){
-		@include remCalc(padding-top, 50px);
-		@include remCalc(padding-bottom, 50px);
+		@include remCalc(padding-top, 64px);
+		@include remCalc(padding-bottom, 64px);
 	}
+  &__title {
+    position: relative;
+    float: left;
+    width: 50%;
+    h1 {
+      text-transform: uppercase;
+    }
+    p {
+      @include remCalc(font-size, 20px);
+    }
+    &:after {
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      height: 8px;
+      width: 48px;
+      background-color: $light-blue;
+      content: '';
+    }
+    @include respond-to(750px) {
+      width: 100%;
+      margin-bottom: 48px;
+    }
+    @include respond-to(650px) {
+      h1 {
+        @include remCalc(font-size, 32px);
+      }
+      p {
+        @include remCalc(font-size, 16px);
+      }
+    }
+  }
+  &__contact {
+    float: right;
+    width: auto;
+    padding: 16px;
+    background-color: rgba($dark-blue, .5);
+    border-radius: 4px;
+    p {
+      margin-bottom: 16px;
+      line-height: 1;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @include respond-to(750px) {
+      float: left;
+    }
+    @include respond-to(small-screen) {
+      width: 100%;
+    }
+  }
 }

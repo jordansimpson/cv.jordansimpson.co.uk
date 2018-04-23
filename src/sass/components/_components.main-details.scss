@@ -1,0 +1,36 @@
+/* 
+------------
+COMPONENTS.
+MAIN DETAILS
+------------ 
+*/
+
+.main-details{
+  float: left;
+  width: 100%;
+	@include remCalc(padding-top, 144px);
+	@include remCalc(padding-bottom, 80px);
+  &__inner {
+    display: flex;
+    @include respond-to(960px) {
+      flex-direction: column;
+    }
+    article {
+      flex: 1 0 60%;
+      @include respond-to(960px) {
+        flex-basis: 100%;
+        margin-bottom: 48px;
+      }
+    }
+    aside {
+      margin-left: 10%;
+      @include respond-to(960px) { 
+        margin-left: 0;
+      }
+    }
+  }
+  .list--pills {
+    @include remCalc(font-size, 14px);
+    @include remCalc(margin-bottom, 32px);
+  }
+}

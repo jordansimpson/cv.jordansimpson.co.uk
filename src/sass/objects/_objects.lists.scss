@@ -58,6 +58,26 @@ There are various list styles and the classes are below to enable you to utilise
 	}
 }
 
+.list--circle {
+	list-style: none;
+	padding-left: 24px;
+	li {
+		position: relative;
+		@include remCalc(margin-bottom, $spacer);
+		line-height: $base-line-height;
+	}
+	li:before {
+		position: absolute;
+		left: -24px;
+		top: 8px;
+		width: 8px;
+		height: 8px;
+		background-color: $main-orange;
+		border-radius: 16px;
+		content: '';
+	}
+}
+
 /*
 A list doesn't always appear vetically so there are a couple of hortizontal list styles 
 below that can be added by assiging a class.
@@ -79,13 +99,14 @@ below that can be added by assiging a class.
 	@extend .list--inline;
 	margin-bottom: 0;
 	li, li a{
-		@include remCalc(margin-right, $spacer--small);
-		@include remCalc(margin-bottom, $spacer);
-		@include remCalc(padding, $spacer);
-		background: #eee;
-		border-radius: $spacer--small;
+		@include remCalc(margin-right, 3px);
+		@include remCalc(margin-bottom, 8px);
+		@include remCalc(padding, 8px);
+		background: $light-orange;
+		border-radius: 4px;
 		display: inline-block;
 		text-decoration: none;
+		line-height: 1;
 	}
 }
 

@@ -8,24 +8,25 @@ BUTTONS
 
 /**
 *
-* The Button (.btn) Class
+* The Button (.button) Class
 * -----------------------
 *
-* All buttons must include the .btn class as this ensures that the basic 
+* All buttons must include the .button class as this ensures that the basic 
 * styling is applied.
 *
 *
 */
 
-.btn{
+.button{
 	@extend %btn;
 	float: left;
+	@include remCalc(font-size, 16px);
 	&:hover{
-		background: #ddd;
+		background: darken($main-orange, 5%);
+		color: #ffffff;
 	}
 	&:active{
-		background: #ccc;
-		color: lighten($base-text-clr, 20%);
+		background: darken($main-orange, 10%);
 	}
 	i{
 		font-size: .9rem;
@@ -45,43 +46,43 @@ BUTTONS
 * [!] Usage Example
 * -----------------
 *
-* <a class="btn btn--disabled">Button</a>
+* <a class="button button--disabled">Button</a>
 *
 *
 */
 
-.btn--small{
+.button--small{
 	@include remCalc(font-size, 12px);
 	@include remCalc(padding, $spacer--small);
 }
 
-.btn--large{
+.button--large{
 	@include remCalc(font-size, 24px);
 	@include remCalc(padding, $spacer--dbl);
 }
-.btn--x-large{
+.button--x-large{
 	@include remCalc(font-size, 36px);	
 	@include remCalc(padding, $spacer--large);
 }
 
-.btn--block{
+.button--block{
 	width: 100%;
 }
 
-.btn--smooth{
+.button--smooth{
 	@extend %smooth;
 }
 
-.btn--rounded{
+.button--rounded{
 	border-radius: 50px;
 }
 
-.btn--bordered{
+.button--bordered{
 	background: none;
 	border: 3px solid #ddd;
 }
 
-.btn--disabled{
+.button--disabled{
 	color: #ddd;
 	background: #f6f6f6;
 	&:hover{
@@ -104,17 +105,17 @@ BUTTONS
 * [!] Usage Example
 * -----------------
 *
-* <div class="btn-group">
-* 	<a class="btn">Button</a>
-* 	<a class="btn">Button</a>
-* 	<a class="btn">Button</a>
-* 	<a class="btn">Button</a>
+* <div class="button-group">
+* 	<a class="button">Button</a>
+* 	<a class="button">Button</a>
+* 	<a class="button">Button</a>
+* 	<a class="button">Button</a>
 * </div>
 *
 *
 */
 
-.btn-group{
+.button-group{
 	float: left;
 	display: inline-block;
 	@include remCalc(margin-bottom, $spacer);
@@ -129,50 +130,50 @@ BUTTONS
 *
 * The button group styles follow on the from the button styles. This enables
 * you to assign the same styling achieved on the button styling without having
-* to assign the class to each individual .btn within the group. The example
-* below would provide you with the smooth corners on the .btn-group apposed to 
-* each individual .btn element.
+* to assign the class to each individual .button within the group. The example
+* below would provide you with the smooth corners on the .button-group apposed to 
+* each individual .button element.
 *
 * [!] Usage Example
 * -----------------
 *
-* <div class="btn-group btn-group--smooth">
-* 	<a class="btn">Button</a>
-* 	<a class="btn">Button</a>
-* 	<a class="btn">Button</a>
-* 	<a class="btn">Button</a>
+* <div class="button-group button-group--smooth">
+* 	<a class="button">Button</a>
+* 	<a class="button">Button</a>
+* 	<a class="button">Button</a>
+* 	<a class="button">Button</a>
 * </div>
 *
 *
 */
 
-.btn-group .btn{
+.button-group .button{
 	margin: 0;
 	&:not(:first-child){
 		border-left: 0;
 	}
 }
 
-.btn-group--smooth{
-	.btn:first-child{
+.button-group--smooth{
+	.button:first-child{
 		border-radius: 5px 0px 0px 5px;
 	}
-	.btn:last-child{
+	.button:last-child{
 		border-radius: 0px 5px 5px 0px;
 	}
 }
 
-.btn-group--rounded{
-	.btn:first-child{
+.button-group--rounded{
+	.button:first-child{
 		border-radius: 50px 0px 0px 50px;
 	}
-	.btn:last-child{
+	.button:last-child{
 		border-radius: 0px 50px 50px 0px;
 	}
 }
 
-.btn-group--bordered .btn{
-	@extend .btn--bordered;
+.button-group--bordered .button{
+	@extend .button--bordered;
 	&:hover{
 		background: #ddd;
 	}
@@ -188,33 +189,33 @@ BUTTONS
 *
 * [!] Usage Example
 * -----------------
-* <div class="btn--centered">
-*     <a class="btn">Button Centered</a>
+* <div class="button--centered">
+*     <a class="button">Button Centered</a>
 * </div>
 *
 * - or -
 *
-* <div class="btn--centered">
-*     <div class="btn-group">
-*         <a class="btn">Button Centered</a>
-*         <a class="btn">Button Centered</a>
-*         <a class="btn">Button Centered</a>
+* <div class="button--centered">
+*     <div class="button-group">
+*         <a class="button">Button Centered</a>
+*         <a class="button">Button Centered</a>
+*         <a class="button">Button Centered</a>
 *     </div>
 * </div>
 *
 */
 
-.btn--centered{
+.button--centered{
 	text-align: center;
 	display: block;
-	.btn-group{
+	.button-group{
 		float: none;
 		margin: 0 auto;
-		.btn{
+		.button{
 			float: left;
 		}
 	}
-	.btn{
+	.button{
 		float: none;
 		margin-right: 0;
 	}
@@ -227,20 +228,20 @@ BUTTONS
 * --------------
 *
 * The button colors are a set of deafults and can be customised were required 
-* by creating a new class e.g. .btn--custom-class{ background: purple }. 
+* by creating a new class e.g. .button--custom-class{ background: purple }. 
 * The buttons utilise a number of color variables set in the 
 * _settings.colors.scss file and it is recommended that if you wish to create 
-* a custom .btn that you create a variable in that file to call where required.
+* a custom .button that you create a variable in that file to call where required.
 *
 * [!] Usage Example
 * -----------------
 *
-* <a class="btn btn--success">Button</a>
+* <a class="button button--success">Button</a>
 *
 *
 */
 
-.btn--success{
+.button--success{
 	background: $success-clr;
 	border-color: darken($success-clr, 10%);
 	color: #fff;
@@ -250,7 +251,7 @@ BUTTONS
 	}
 }
 
-.btn--success.btn--bordered, .btn--bordered.btn--success{
+.button--success.button--bordered, .button--bordered.button--success{
 	border-color: $success-clr;
 	color: $success-clr;
 	background: none;
@@ -260,7 +261,7 @@ BUTTONS
 	}
 }
 
-.btn--error{
+.button--error{
 	background: $error-clr;
 	border-color: darken($error-clr, 10%);
 	color: #fff;
@@ -270,7 +271,7 @@ BUTTONS
 	}
 }
 
-.btn--error.btn--bordered, .btn--bordered.btn--error{
+.button--error.button--bordered, .button--bordered.button--error{
 	border-color: $error-clr;
 	color: $error-clr;
 	background: none;
@@ -280,7 +281,7 @@ BUTTONS
 	}
 }
 
-.btn--attention{
+.button--attention{
 	background: $attention-clr;
 	border-color: darken($attention-clr, 10%);
 	color: #fff;
@@ -290,7 +291,7 @@ BUTTONS
 	}
 }
 
-.btn--attention.btn--bordered, .btn--bordered.btn--attention{
+.button--attention.button--bordered, .button--bordered.button--attention{
 	border-color: $attention-clr;
 	color: $attention-clr;
 	background: none;
@@ -300,7 +301,7 @@ BUTTONS
 	}
 }
 
-.btn--neutral{
+.button--neutral{
 	background: $neutral-clr;
 	border-color: darken($neutral-clr, 10%);
 	color: #fff;
@@ -310,7 +311,7 @@ BUTTONS
 	}
 }
 
-.btn--neutral.btn--bordered, .btn--bordered.btn--neutral{
+.button--neutral.button--bordered, .button--bordered.button--neutral{
 	border-color: $neutral-clr;
 	color: $neutral-clr;
 	background: none;

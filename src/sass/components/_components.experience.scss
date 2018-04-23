@@ -5,41 +5,37 @@ EXPERIENCE
 ------------ 
 */
 
-.experience{
-	border-top: 1px solid $border-clr;
-	@include remCalc(padding-top, $spacer--dbl);
-	@include remCalc(padding-bottom, $spacer--dbl);
+.experience h3 {
+	position: relative;
+	margin-bottom: 64px;
+	&:after {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    height: 8px;
+    width: 48px;
+    background-color: $light-orange;
+    content: '';
+  }
 }
 
 .experience__list{
-	border-left: 2px dotted $grey;
 	float: left;
-	@include remCalc(margin-top, $spacer--dbl);
-	@include remCalc(margin-left, $spacer);
-	@include remCalc(padding-left, 30px);
-	padding-left: 20px;
+	h4 {
+		color: $base-text-clr;
+	}
 }
 
 	.experience__list--item{
 		position: relative;
-		&:after{
-			content: '';
-			background: $brand_red;
-			position: absolute;
-			left: -30px;
-			top: 0;
-			border-radius: $spacer--dbl;
-			@include remCalc(width, $spacer--dbl);
-			@include remCalc(height, $spacer--dbl);
-		}
-		ul{
-			@include remCalc(margin-bottom, $spacer--large);
-			li{
+		ul {
+			@include remCalc(margin-bottom, 48px);
+			li {
 				@include remCalc(margin-bottom, $spacer--dbl);
 			}
 		}
 		&:last-child{
-			ul{
+			ul {
 				margin-bottom: 0;
 			}
 		}
@@ -51,7 +47,6 @@ EXPERIENCE
 
 	.job__role{
 		@include remCalc(font-size, 16px);
-		color: $base-text-clr--dull;
-		letter-spacing: 0.02;
-		@include remCalc(margin-bottom, $spacer--dbl);
+		color: #9F9F9F;
+		@include remCalc(margin-bottom, 24px);
 	}

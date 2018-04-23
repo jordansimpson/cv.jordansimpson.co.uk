@@ -15,6 +15,13 @@ $brand-gold: #CCAD5C;
 $brand-dark: #252525;
 $brand-orange: #F7A310;
 
+$main-blue: #252645;
+$dark-blue: #1B1B2B;
+$light-blue: #50516A;
+
+$main-orange: #f7544c;
+$light-orange: #FEEFEE;
+
 
 // Default Colors
 // ----------------------------------------------------
@@ -26,7 +33,7 @@ $light-grey: #f6f6f6;
 $grey: #e5e5e5;
 $dark-grey: #999;
 
-$base-text-clr: #222;
+$base-text-clr: $dark-blue;
 $base-text-clr--dull: lighten($base-text-clr, 50%);
 $sub-headline-clr: $base-text-clr--dull;
 $base-background-clr: #fff;
