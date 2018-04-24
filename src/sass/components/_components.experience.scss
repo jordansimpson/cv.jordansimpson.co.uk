@@ -45,8 +45,16 @@ EXPERIENCE
 	@include remCalc(margin-bottom, $spacer--dbl);
 }
 
-	.job__role{
-		@include remCalc(font-size, 16px);
-		color: #9F9F9F;
-		@include remCalc(margin-bottom, 24px);
-	}
+.job__period {
+  display: inline-block;
+  @include respond-to(450px){
+    display: block;
+    margin: 8px 0px 16px;
+  }
+}
+
+.job__role{
+	@include remCalc(font-size, 16px);
+	color: #9F9F9F;
+	@include remCalc(margin-bottom, 24px);
+}
