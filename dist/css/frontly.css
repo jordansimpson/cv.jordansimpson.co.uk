@@ -1363,7 +1363,12 @@ h4 {
 
 h5 {
   font-size: 20px;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  color: #1B1B2B; }
 
 .sub-header {
   color: #8d8db8; }
@@ -2062,6 +2067,10 @@ EXPERIENCE
       display: block;
       margin: 8px 0px 16px; } }
 
+.job__summary {
+  display: block;
+  margin-bottom: 32px; }
+
 .job__role {
   font-size: 16px;
   font-size: 1rem;
@@ -2395,6 +2404,7 @@ MAIN FOOTER
   padding-bottom: 3rem; }
   .main-footer__title {
     float: left;
+    margin-top: 0;
     color: #ffffff;
     font-weight: 400; }
     .main-footer__title--name {

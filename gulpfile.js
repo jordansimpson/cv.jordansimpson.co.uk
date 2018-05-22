@@ -1,5 +1,5 @@
 // Set site URL to be called in tasks
-var siteUrl = 'http://superdream.dev/superdream-boilerplate';
+var siteUrl = '';
 
 // Include gulp and all required plugins
 var gulp = require('gulp'),

@@ -53,6 +53,11 @@ EXPERIENCE
   }
 }
 
+.job__summary {
+  display: block;
+  margin-bottom: 32px;
+}
+
 .job__role{
 	@include remCalc(font-size, 16px);
 	color: #9F9F9F;

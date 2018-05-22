@@ -14,6 +14,7 @@ MAIN FOOTER
 	@include remCalc(padding-bottom, 48px);
 	&__title {
 		float: left;
+		margin-top: 0;
 		color: #ffffff;
 		font-weight: 400;
 		&--name {
@@ -25,9 +26,6 @@ MAIN FOOTER
 				width: 100%;
 				margin-bottom: 16px;
 			}
-		}
-		&--job-description {
-			
 		}
 	}
 	&__contact {

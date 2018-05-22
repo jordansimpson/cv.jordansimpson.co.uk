@@ -29,6 +29,9 @@ h4{
 
 h5{
 	@include remCalc(font-size, 20px);
+	@include remCalc(margin-top, 24px);
+	@include remCalc(margin-bottom, 16px);
+	color: $base-text-clr;
 }
 
 .sub-header{
