@@ -26,8 +26,8 @@ INTRO
     background-position-x: right;
     background-position-y: 50%;
     @include respond-to(1288px) {
-      width: 100%;
-      margin-left: 0;
+      width: calc(100% + 48px);
+      margin-left: -24px;
     }
     @include respond-to(960px) {
       background: none;

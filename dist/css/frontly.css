@@ -2195,8 +2195,8 @@ INTRO
     background-position-y: 50%; }
     @media only screen and (max-width: 1288px) {
       .intro__inner {
-        width: 100%;
-        margin-left: 0; } }
+        width: calc(100% + 48px);
+        margin-left: -24px; } }
     @media only screen and (max-width: 960px) {
       .intro__inner {
         background: none;
