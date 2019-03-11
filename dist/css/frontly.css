@@ -2193,6 +2193,10 @@ INTRO
     background-size: cover;
     background-position-x: right;
     background-position-y: 50%; }
+    @media only screen and (max-width: 1288px) {
+      .intro__inner {
+        width: calc(100% + 40px);
+        margin-left: -20px; } }
     @media only screen and (max-width: 960px) {
       .intro__inner {
         background: none;
